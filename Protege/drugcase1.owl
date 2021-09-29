@@ -1,0 +1,623 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/mariy/ontologies/2021/8/untitled-ontology-22#"
+     xml:base="http://www.semanticweb.org/mariy/ontologies/2021/8/untitled-ontology-22"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:drugcase1="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#AvailableAt -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#AvailableAt">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#StorePrice"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Price"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Store"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#FoundIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#FoundIn">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#hasDrug"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#IsSourceDrugIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#IsSourceDrugIn">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#hasSourceDrug"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#IsTargetDrugIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#IsTargetDrugIn">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#hasTargetDrug"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Manufactures -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Manufactures">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#madeby"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#ProductPrice -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#ProductPrice">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#price_for"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#StorePrice -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#StorePrice"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#hasDrug -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#hasDrug">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Product"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Drug"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#hasSource -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#hasSource">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#of"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Condition"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Product"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Treatment"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Source"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#hasSourceDrug -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#hasSourceDrug">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Interactions"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Drug"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#hasTargetDrug -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#hasTargetDrug">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Interactions"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Drug"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#hasTreatment -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#hasTreatment">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#treats"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#in -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#in">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#includes"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#includes -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#includes">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Treatment"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Drug"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#madeby -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#madeby">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Product"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Manufacturer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#of -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#of"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#price_for -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#price_for">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Price"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Product"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#treats -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#treats">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Treatment"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Condition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#hasConditionID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#hasConditionID">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Condition"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Treatment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#hasConditionName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#hasConditionName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Condition"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#hasConditionURL -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#hasConditionURL">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Condition"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#hasDrugID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#hasDrugID">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Drug"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Product"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Treatment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#hasDrugName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#hasDrugName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Drug"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#hasDrugWikiURL -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#hasDrugWikiURL">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Drug"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#hasDrugbankURL -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#hasDrugbankURL">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#hasInteractionID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#hasInteractionID">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Interactions"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#hasInteractionSourceDrugID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#hasInteractionSourceDrugID">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Drug"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Interactions"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#hasInteractionTargetDrugID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#hasInteractionTargetDrugID">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Drug"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Interactions"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#hasManufacturerID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#hasManufacturerID">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Manufacturer"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Product"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#hasManufacturerName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#hasManufacturerName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Manufacturer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#hasPrice -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#hasPrice">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#hasPriceID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#hasPriceID">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Price"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#hasPriceType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#hasPriceType">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Price"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#hasPriceURL -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#hasPriceURL">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Price"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#hasProductID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#hasProductID">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Price"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Product"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#hasProductNReviews -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#hasProductNReviews">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Product"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#hasProductName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#hasProductName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Product"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#hasProductType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#hasProductType">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Product"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#hasProductURL -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#hasProductURL">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Product"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#hasSourceID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#hasSourceID">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Condition"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Drug"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Product"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Source"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Treatment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#hasSourceName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#hasSourceName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Source"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#hasSourceURL -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#hasSourceURL">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Source"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#hasStoreID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#hasStoreID">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Price"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Store"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#hasStoreName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#hasStoreName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Store"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#hasTreatmentID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#hasTreatmentID">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Treatment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Condition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Condition"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Drug -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Drug"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Interactions -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Interactions"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Manufacturer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Manufacturer"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Price -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Price"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Product -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Product"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Source -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Source"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Store -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Store"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Treatment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Treatment"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Condition1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Condition1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Condition"/>
+        <drugcase1:hasSource rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Source1"/>
+        <drugcase1:hasTreatment rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Treatment1"/>
+        <owl:topDataProperty>hasConditionID 1
+hasConditionName &quot;renal cell carcinoma&quot;
+hasSourceID 2
+hasConditionURL &quot;https://www.webmd.com/drugs/2/condition-450/renal%20cell%20carcinoma&quot;</owl:topDataProperty>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Drug1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Drug1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Drug"/>
+        <drugcase1:FoundIn rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Product1"/>
+        <drugcase1:IsSourceDrugIn rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Interaction1"/>
+        <drugcase1:IsTargetDrugIn rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Interaction1"/>
+        <owl:topDataProperty>hasDrugID &quot;DB08875&quot;
+hasDrugName &quot;Cabozantinib&quot;
+hasDrugWikiURL &quot;http://www.wikidata.org/entity/Q795057&quot;
+hasDrugbankURL &quot;https://go.drugbank.com/drugs/DB08875&quot;</owl:topDataProperty>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Interaction1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Interaction1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Interactions"/>
+        <owl:topDataProperty>hasInteractionID 193057
+hasSourceDrug &quot;DB08875&quot;
+hasTargetDrug &quot;DB00012&quot;</owl:topDataProperty>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Manufacturer1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Manufacturer1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Manufacturer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Price1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Price1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Price"/>
+        <drugcase1:AvailableAt rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Store1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Product1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Product1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Product"/>
+        <drugcase1:ProductPrice rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Price1"/>
+        <drugcase1:madeby rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Manufacturer1"/>
+        <owl:topDataProperty>hasProductID 1
+hasSourceID 2
+hasDrugID &quot;DB08875&quot;
+hasProductName &quot;Cabometyx&quot;
+hasProductURL &quot;https://www.webmd.com/drugs/2/drug-171648-&quot;
+hasProductType &quot;RX&quot;
+hasProductNReviews 5</owl:topDataProperty>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Source1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Source1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Source"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Store1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Store1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Store"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Treatment1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Treatment1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Treatment"/>
+        <drugcase1:includes rdf:resource="http://www.semanticweb.org/mariy/ontologies/2021/8/drugcase1#Drug1"/>
+        <owl:topDataProperty>hasTreatmentID 2
+hasConditionID 1
+hasDrugID &quot;DB08875&quot;
+hasSourceID 2</owl:topDataProperty>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
