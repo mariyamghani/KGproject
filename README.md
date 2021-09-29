@@ -9,6 +9,9 @@
 
 Apache Nifi is an ETL tool we will be using for this project
 
+![nifi_flow](https://user-images.githubusercontent.com/56685290/135274219-74dfcbf7-7c02-47d0-9e92-69884938b75c.PNG)
+
+
 As of now installing NiFi as a service is supported only for Linux and macOS users.
 For Windows users, navigate to the folder where NiFi was installed. Within this folder is a subfolder named bin. Navigate to this subfolder and double-click the run-nifi.bat file.
 
@@ -28,3 +31,4 @@ There is both web and local client version available for protege.
 We recommend installing it locally as there is more documentation and tutorials available on using it.
 
 [Protege Tutorial- Pizza ontology](https://www.michaeldebellis.com/post/new-protege-pizza-tutorial)
+![Ontology](https://user-images.githubusercontent.com/56685290/135274017-bc0ec8e3-81f1-4f15-9377-542e310c11db.jpeg)
