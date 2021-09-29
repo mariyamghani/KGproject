@@ -1,0 +1,17 @@
+PREFIX : <http://api.stardog.com/OpenDrug/Stores/>
+MAPPING 
+FROM JSON {
+	{
+		"id" : "?id",
+		"name" : "?name"
+	}
+}
+TO
+{
+?store a :Store;
+		:id ?id;
+		:name ?name.
+}
+WHERE {
+	BIND(template("http://api.stardog.com/OpenDrug/Stores/id={id}") AS ?store)
+}

@@ -1,0 +1,29 @@
+PREFIX : <http://api.stardog.com/OpenDrug/Treatments/>
+MAPPING 
+FROM JSON {
+	{
+		"id" : "?id",
+		"source_id" : "?source_id",
+		"condition_id" : "?condition_id",
+		"drug_id" : "?drug_id"
+	}
+
+}
+TO
+{
+?treatment a :Treatment;
+		:id ?id;
+		:source_id ?source_id;
+		:condition_id ?condition_id;
+		:drug_id ?drug_id;
+		
+		:ref_source_id ?ref_source_id;
+		:ref_condition_id ?ref_condition_id;
+		:ref_drug_id ?ref_drug_id;
+}
+WHERE {
+	BIND(template("http://api.stardog.com/OpenDrug/Treatments/id={id}") AS ?treatment)
+	BIND(template("http://api.stardog.com/OpenDrug/Sources/id={source_id}") AS ?ref_source_id)
+	BIND(template("http://api.stardog.com/OpenDrug/Conditions/id={condition_id}") AS ?ref_condition_id)
+	BIND(template("http://api.stardog.com/OpenDrug/Drugs/id={drug_id}") AS ?ref_drug_id)
+}

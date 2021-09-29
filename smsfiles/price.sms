@@ -1,0 +1,29 @@
+PREFIX : <http://api.stardog.com/OpenDrug/Prices/>
+MAPPING 
+FROM JSON {
+	{
+		"id" : "?id",
+		"product_id" : "?product_id",
+		"store_id" : "?store_id",
+		"type" : "?type",
+		"price" : "?price",
+		"url" : "?url"
+	}
+}
+TO
+{
+?prices a :Price;
+		:id ?id;
+		:product_id ?product_id;
+		:store_id ?store_id;
+		:type ?type;
+		:price ?price;
+		:url ?url;
+		:ref_product_id ?ref_product_id;
+		:ref_store_id ?ref_store_id.
+}
+WHERE {
+	BIND(template("http://api.stardog.com/OpenDrug/Prices/id={id}") AS ?prices)
+	BIND(template("http://api.stardog.com/OpenDrug/Products/id={product_id}") AS ?ref_product_id)
+	BIND(template("http://api.stardog.com/OpenDrug/Stores/id={store_id}") AS ?ref_store_id)
+}

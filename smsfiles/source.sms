@@ -1,0 +1,19 @@
+PREFIX : <http://api.stardog.com/OpenDrug/Sources/>
+MAPPING 
+FROM JSON {
+	{
+		"id" : "?id",
+		"name" : "?name",
+		"url" : "?url"
+	}
+}
+TO
+{
+?source a :Source;
+		:id ?id;
+		:name ?name;
+		:url ?url.
+}
+WHERE {
+	BIND(template("http://api.stardog.com/OpenDrug/Sources/id={id}") AS ?source)
+}

@@ -1,0 +1,35 @@
+PREFIX : <http://api.stardog.com/OpenDrug/Products/>
+MAPPING 
+FROM JSON {
+	{
+		"id" : "?id",
+		"name" : "?name",
+		"source_id" : "?source_id",
+		"drug_id" : "?drug_id",
+		"url" : "?url",
+		"type" : "?type",
+		"n_reviews" : "?n_reviews",
+		"manufacturer_id" : "?manufacturer_id"
+	}
+}
+TO
+{
+?product a :Product;
+		:id ?id;
+		:name ?name;
+		:source_id ?source_id;
+		:drug_id ?drug_id;
+		:url ?url;
+		:type ?type;
+		:n_reviews ?n_reviews;
+		:manufacturer_id ?manufacturer_id;
+		:ref_source_id ?ref_source_id;
+		:ref_drug_id ?ref_drug_id;
+		:ref_manufacturer_id ?ref_manufacturer_id.
+}
+WHERE {
+	BIND(template("http://api.stardog.com/OpenDrug/Products/id={id}") AS ?product)
+	BIND(template("http://api.stardog.com/OpenDrug/Sources/id={source_id}") AS ?ref_source_id)
+	BIND(template("http://api.stardog.com/OpenDrug/Drugs/id={drug_id}") AS ?ref_drug_id)
+	BIND(template("http://api.stardog.com/OpenDrug/Manufacturers/id={manufacturer_id}") AS ?ref_manufacturer_id)
+}

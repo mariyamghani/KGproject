@@ -1,0 +1,23 @@
+PREFIX : <http://api.stardog.com/OpenDrug/Interactions/>
+MAPPING 
+FROM JSON {
+	{
+		"id" : "?id",
+		"source_drug_id" : "?source_drug_id",
+		"target_drug_id" : "?target_drug_id"
+	}
+}
+TO
+{
+?interaction a :Interaction;
+		:id ?id;
+		:source_drug_id ?source_drug_id;
+		:target_drug_id ?target_drug_id;
+		:ref_source_drug_id ?ref_source_drug_id;
+		:ref_target_drug_id ?ref_target_drug_id.
+}
+WHERE {
+	BIND(template("http://api.stardog.com/OpenDrug/Interactions/id={id}") AS ?interaction)
+	BIND(template("http://api.stardog.com/OpenDrug/Drugs/id={source_drug_id}") AS ?ref_source_drug_id)
+	BIND(template("http://api.stardog.com/OpenDrug/Drugs/id={target_drug_id}") AS ?ref_target_drug_id)
+}

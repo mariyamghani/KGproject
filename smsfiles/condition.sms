@@ -1,0 +1,23 @@
+PREFIX : <http://api.stardog.com/OpenDrug/Conditions/>
+MAPPING 
+FROM JSON {
+	{
+		"id" : "?id",
+		"name" : "?name",
+		"source_id" : "?source_id",
+		"url" : "?url"
+	}
+}
+TO
+{
+?conditions a :Condition;
+		:id ?id;
+		:name ?name;
+		:source_id ?source_id;
+		:url ?url;
+		:ref_source_id ?ref_source_id.
+}
+WHERE {
+	BIND(template("http://api.stardog.com/OpenDrug/Conditions/id={id}") AS ?conditions)
+	BIND(template("http://api.stardog.com/OpenDrug/Sources/id={source_id}") AS ?ref_source_id)
+}
